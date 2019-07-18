@@ -1,4 +1,4 @@
-module GitHubJuliaMITTemplate
+module IterUtils
 
 greet() = print("Hello World!")
 

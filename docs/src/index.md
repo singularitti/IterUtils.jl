@@ -1,8 +1,8 @@
-# GitHubJuliaMITTemplate.jl
+# IterUtils.jl
 
 ```@index
 ```
 
 ```@autodocs
-Modules = [GitHubJuliaMITTemplate]
+Modules = [IterUtils]
 ```

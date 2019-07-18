@@ -1,6 +1,6 @@
-using GitHubJuliaMITTemplate
+using IterUtils
 using Test
 
-@testset "GitHubJuliaMITTemplate.jl" begin
+@testset "IterUtils.jl" begin
     # Write your own tests here.
 end
