@@ -16,6 +16,7 @@ function throw_which_in(xs, each)
             continue
         end  # if-else
     end  # for
+    return nothing
 end  # function throw_which_in
 
 function throw_which_occursin(xs, str::AbstractString)
@@ -26,6 +27,7 @@ function throw_which_occursin(xs, str::AbstractString)
             continue
         end  # if-else
     end  # for
+    return nothing
 end  # function throw_which_occursin
 
 function throw_which_match(rs, line)
@@ -37,4 +39,5 @@ function throw_which_match(rs, line)
             continue
         end  # if-else
     end  # for
+    return nothing
 end  # function throw_which_match
