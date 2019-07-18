@@ -8,4 +8,4 @@
 [![Coveralls](https://coveralls.io/repos/github/singularitti/IterUtils.jl/badge.svg?branch=master)](https://coveralls.io/github/singularitti/IterUtils.jl?branch=master)
 [![Build Status](https://api.cirrus-ci.com/github/singularitti/IterUtils.jl.svg)](https://cirrus-ci.com/github/singularitti/IterUtils.jl)
 
-GitHub now allows users to generate a repo from a template. And this is my Julia template with an MIT license.
+This repo stores some iterator utilities for Julia.
