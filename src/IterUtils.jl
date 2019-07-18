@@ -1,5 +1,5 @@
 module IterUtils
 
-greet() = print("Hello World!")
+include("throw.jl")
 
 end # module
