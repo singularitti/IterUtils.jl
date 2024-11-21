@@ -1,9 +1,3 @@
-#=
-throw:
-- Julia version: 1.0
-- Author: singularitti
-- Date: 2019-07-18
-=#
 export throw_which_in,
     throw_which_occursin,
     throw_which_match
@@ -14,10 +8,10 @@ function throw_which_in(xs, each)
             return x
         else
             continue
-        end  # if-else
-    end  # for
+        end
+    end
     return nothing
-end  # function throw_which_in
+end
 
 function throw_which_occursin(xs, str::AbstractString)
     for x in xs
@@ -25,10 +19,10 @@ function throw_which_occursin(xs, str::AbstractString)
             return x
         else
             continue
-        end  # if-else
-    end  # for
+        end
+    end
     return nothing
-end  # function throw_which_occursin
+end
 
 function throw_which_match(rs, line)
     for r in rs
@@ -37,7 +31,7 @@ function throw_which_match(rs, line)
             return r
         else
             continue
-        end  # if-else
-    end  # for
+        end
+    end
     return nothing
-end  # function throw_which_match
+end
