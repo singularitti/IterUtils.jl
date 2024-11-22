@@ -1,28 +1,24 @@
 export unpack_tuple
 
-function unpack_tuple(f, args...; kwargs...)
-    # Call the function and create a stateful iterator
-    iter = Iterators.Stateful(f(args...; kwargs...))
-    # Extract the first tuple from the iterator
+function unpack_tuple(iter)
     iter_first = iterate(iter)
     if iter_first === nothing
         return ()  # Handle the case where the iterator is empty
     end
-    elements_first, _ = iter_first  # First element of `iterate(iter)` contains the tuple
+    elements_first, state = iter_first  # Extract the first tuple from the iterator
     # Initialize a tuple of empty arrays based on the number of elements in the tuple
     N = length(elements_first)
     arrays = ntuple(i -> [elements_first[i]], N)
-    # Iterate through the remaining tuples
+    # Iterate through the remaining elements in the iterator
     while true
-        iter_next = iterate(iter)
+        iter_next = iterate(iter, state)
         if iter_next === nothing
             break
         end
-        elements, _ = iter_next  # Extract the tuple from `iterate(iter)`
+        elements, state = iter_next
         for (array, element) in zip(arrays, elements)
             push!(array, element)
         end
     end
-    # Return the tuple of arrays
-    return arrays
+    return arrays  # Return the tuple of arrays
 end
