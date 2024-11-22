@@ -1,6 +1,6 @@
 name = "IterUtils"
 uuid = "a70ba79e-a927-11e9-0aac-6bae85b276cc"
-authors = ["Qi Zhang <singularitti@outlook.com>"]
+authors = ["singularitti <singularitti@outlook.com>"]
 version = "0.1.0"
 
 [compat]
