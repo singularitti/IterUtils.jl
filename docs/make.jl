@@ -1,17 +1,23 @@
-using Documenter, IterUtils
+using IterUtils
+using Documenter
+
+DocMeta.setdocmeta!(IterUtils, :DocTestSetup, :(using IterUtils); recursive=true)
 
 makedocs(;
     modules=[IterUtils],
-    format=Documenter.HTML(),
+    authors="singularitti <singularitti@outlook.com> and contributors",
+    sitename="IterUtils.jl",
+    format=Documenter.HTML(;
+        canonical="https://singularitti.github.io/IterUtils.jl",
+        edit_link="main",
+        assets=String[],
+    ),
     pages=[
         "Home" => "index.md",
     ],
-    repo="https://github.com/singularitti/IterUtils.jl/blob/{commit}{path}#L{line}",
-    sitename="IterUtils.jl",
-    authors="Qi Zhang <singularitti@outlook.com>",
-    assets=String[],
 )
 
 deploydocs(;
     repo="github.com/singularitti/IterUtils.jl",
+    devbranch="main",
 )
